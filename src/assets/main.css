@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100dvh;
+  background-color: light-dark(white, black);
+  color: light-dark(black, white);
+  transition: background-color 0.3s, color 0.3s;
+}
