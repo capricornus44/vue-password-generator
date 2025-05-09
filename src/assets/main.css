@@ -1,9 +1,36 @@
+:root {
+  --white: #ffffff;
+  --black: #212121;
+  --dark: #0a0e31;
+  --gray: #d4d4d4;
+  --muted: rgba(255, 255, 255, 0.5);
+  --bg: rgba(255, 255, 255, 0.08);
+  --accent: #5d68e2;
+  --accent-2: #764ba2;
+  --disabled: #4f4f6a;
+  --disabled-2: #909090;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 2rem;
+  --transition: 0.3s ease-in-out;
+  --transition-fast: 0.15s ease-in-out;
+  --transition-cubic: 0.3s cubic-bezier(0.24, 0, 0.5, 1);
+  --shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35),
+    0 8px 12px rgba(0, 0, 0, 0.15);
+  --shadow-2: 0 4px 8px rgba(255, 255, 255, 0.08);
+  --shadow-3: 0 0 0 2px rgba(255, 255, 255, 0.75);
+  --setting-height: 4rem;
+  --cb-gap: 0.75rem;
+  --cb-size: 1.5rem;
+}
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 
 html {
@@ -11,10 +38,8 @@ html {
 }
 
 body {
-  display: grid;
-  place-content: center;
-  height: 100dvh;
-  background-color: light-dark(white, black);
-  color: light-dark(black, white);
+  padding-inline: 1.25rem;
+  background-color: light-dark(var(--white), var(--black));
+  color: light-dark(var(--black), var(--white));
   transition: background-color 0.3s, color 0.3s;
 }
